@@ -27,13 +27,23 @@ function App() {
     const num2 = parseFloat(value2);
     setresult(num1-num2);
   }
+  const multiply=() =>{
+    const num1 = parseFloat(value1);
+    const num2 = parseFloat(value2);
+    setresult(num1*num2);
+  }
+  const divide=() =>{
+    const num1 = parseFloat(value1);
+    const num2 = parseFloat(value2);
+    setresult(num1/num2);
+  }
   return (
     <>
  <div className="container mx-auto my-8 p-8 bg-gray-100 border border-gray-300 rounded">
       <h1 className="text-2xl font-bold mb-4">CALCULATOR</h1>
 
       <div className="mb-4">
-        <label className="block">
+        <label className="block font-bold text-black-500 ">
           Type the first number
           <input
             className="border border-gray-300 px-2 py-1 rounded"
@@ -45,7 +55,7 @@ function App() {
       </div>
 
       <div className="mb-4">
-        <label className="block">
+        <label className="block font-bold text-black-500">
           Type the second number
           <input
             className="border border-gray-300 px-2 py-1 rounded"
@@ -68,6 +78,18 @@ function App() {
           onClick={subtract}
         >
           SUBTRACT
+        </button>
+        <button
+          className="bg-yellow-500 text-white px-4 py-2 m-2 rounded"
+          onClick={multiply}
+        >
+          MULTIPLY
+        </button>
+        <button
+          className="bg-green-500 text-white px-4 py-2 m-2 rounded"
+          onClick={divide}
+        >
+          DIVIDE
         </button>
       </div>
 
